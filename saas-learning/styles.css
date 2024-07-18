@@ -1,0 +1,30 @@
+.container .title {
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0 15px;
+  text-align: center;
+}
+.container .title {
+  color: black;
+}
+.container .subtitle {
+  color: rgb(106, 204, 40);
+  font-size: 1rem;
+}
+.container .button {
+  display: inline-block;
+  border: none;
+  background-color: black;
+  color: rgb(106, 204, 40);
+  font-size: 16px;
+  padding: 15px 30px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=styles.css.map */

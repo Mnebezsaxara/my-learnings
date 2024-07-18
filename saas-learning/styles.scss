@@ -1,0 +1,62 @@
+// ПЕРЕМЕННЫЕ  syntax: $nameOfVariable: value;
+$primary-color: black;
+$secondary-color: rgb(106, 204, 40);
+$defaultfz: 16px;
+
+
+
+// МИКСИНЫ  syntax: @mixin nameOfMixin(arument, argument){}
+@mixin container{
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;
+}
+
+@mixin button($color){
+    display: inline-block;
+    border: none;
+    background-color: black;
+    color: $color;
+    font-size: $defaultfz;
+    padding: 15px 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+
+
+// НАСЛЕДОВАНИЕ  syntax: %nameofInhert{}
+%text{
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+
+
+// ФУНКЦИЙ   syntax: @function nameOfFunction(arg1, arg2){ @return value; }
+@function calculateRem($defaultfz){
+    $rem-size: $defaultfz / 16px;
+    @return #{$rem-size}rem;
+}
+
+
+
+// ВЛОЖЕННОСТЬ
+.container{
+    @include container;
+
+    .title{
+        @extend %text;
+        color: $primary-color;
+    }
+    .subtitle{
+        color: $secondary-color;
+        font-size: calculateRem($defaultfz);
+    }
+    .button{
+        @include button($secondary-color);
+    }
+    
+}
+

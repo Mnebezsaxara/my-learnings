@@ -1,0 +1,30 @@
+:root{
+    --fs:16px;
+    --color:white;
+    --fw:bold;
+}
+.test{
+    background-color: black;
+    font-size: var(--fs);
+    font-weight: var(--fw);
+    color: var(--color);
+}
+.test2{
+    background-color: blue !important;
+    color: aliceblue;
+}
+div.test2{
+    background-color: aqua;
+}
+div:not(.test2){
+    color: brown;
+}
+div p{
+    font-size: 30px;
+}
+div + p{
+    color: chartreuse;
+}
+div ~ p{
+    font-style: italic;
+}

@@ -1,0 +1,24 @@
+.block1,
+.block2{
+    color: blue;
+}
+
+div ~ p > span > a[href$="p"]{
+    display: block;
+    color: red;
+}
+.block1 + p{
+    background-color: rebeccapurple;
+}
+div ~ p{
+    color: aqua;
+}
+
+input[type="text"]{
+    height: 24px;
+    display: block;
+    margin-bottom: 20px;
+}
+img[src*="cat"]{
+    width: 200px;
+}
